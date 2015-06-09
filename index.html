@@ -3,17 +3,65 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Vtech</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Valencia Technology Club</title>
 
-    </head>
-    <body>
-      <div id="content">
-        <h1>Dr Phil's website</h1>
-        <div>
-          <p>Welcome to Dr Phil's website</p>
-          <p>Hi my names Dr phil</p>
-        </div>
+    <link href="./style/bootstrap.min.css" rel="stylesheet" />
+    <link href="./style/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/underscore.min.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script src="./js/clndr.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header row container-fluid">
+        <h1>VTech</h1>
       </div>
-    </body>
-  </html>
+      <div class="main  ">
+        <section class="area">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <h2 class="text-center">Valencia Technology Club Info</h2>
+              <p class="lead">Bacon ipsum dolor amet landjaeger capicola bacon strip steak kielbasa pork loin. Meatball jowl doner kevin, beef ribs pork hamburger flank cow tri-tip short ribs leberkas. Tri-tip meatball t-bone shank flank tongue hamburger cow alcatra filet mignon.</p>
+            </div>
+          </div>
+        </section>
+        <section class="area">
+          <h4 class="text-center">Events</h4>
+          <div class="clndr">
+          </div>
+        </section>
+        <section class="area">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="text-center">Get in touch</h3>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script type="text/template" id="tmplt">
+      <div class="clndr-controls">
+          <div class="clndr-previous-button">&lsaquo;</div>
+          <div class="month"><%= month %></div>
+          <div class="clndr-next-button">&rsaquo;</div>
+        </div>
+        <div class="clndr-grid">
+          <div class="days-of-the-week">
+            <% _.each(daysOfTheWeek, function(day) { %>
+              <div class="header-day"><%= day %></div>
+            <% }); %>
+            <div class="days">
+              <% _.each(days, function(day) { %>
+                <div class="<%= day.classes %>">
+                <span class="event-indicator"><%- (day.events.length) ? day.events.length : '' %></span>
+                <%= day.day %></div>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+        <div>&nbsp;</div>
+      </script>
+      <script src="./js/main.js"></script>
+    </div>
+  </body>
+</html>
