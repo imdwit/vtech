@@ -16,7 +16,7 @@ $(function() {
     url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid + '/events?key=' + key),
     dataType: 'json',
     success: function(res) {
-
+      console.log("response: ", res);
       var events = res.items.map(function(event) {
         var date = {}; //build the object from the calendar's events
         if (event.start.dateTime)
