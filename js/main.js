@@ -8,6 +8,7 @@ $(function() {
     adjacentDaysChangeMonth: false,
     clickEvents :{
       click: function(e) {
+        console.log(e);
         // console.log(e);
         $('#clndr-details').html('');
         var events = e.events;
@@ -32,6 +33,7 @@ $(function() {
     dataType: 'json',
     success: function(res) {
       var events = res.items.map(function(event) {
+        console.log(event);
         var date = {}; //build the object from the calendar's events
         if (event.start.dateTime)
           date.date = new Date(event.start.dateTime);
@@ -45,6 +47,8 @@ $(function() {
           event.link = event.description.slice(i);
           event.description = event.description.slice(0, i);
         }
+        date.summary = event.summary;
+        date.location = event.location;
         date.link = event.link;
         date.description = event.description;
         return date;
