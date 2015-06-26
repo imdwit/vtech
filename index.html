@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Valencia Technology Club</title>
+	<!-- Bootstrap jams-->
+	<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="./css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+	<link href="./style/style.css" rel="stylesheet" />
+	<!-- Styling and reset jams-->
+	<link href="./style/css.css" rel="stylesheet" />
+	<!-- Google font(s) jams-->
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,400' rel='stylesheet' type='text/css'>>
+
+</head>
+
+
+<body>
+	<!--BEGIN NAV -->
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<!--Logo -->
+			<a class="navbar-brand col-xs-3" href="#btt">
+				<img id="miniLogo" src="./images/mini-logo.png">
+			</a>
+			<!--End Logo -->
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about">About</a></li>
+					<li><a href="#cal">Events</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<!--END NAV -->
+
+
+
+	<!--Begin Landing-->
+	<div class="container-fluid groupback">
+		<a class="lts" name="btt">hi there</a>
+		<div class="main">
+			<section class="area first">
+				<div class="row">
+
+					<div class="col-md-6 col-md-offset-3 col-sm-offset-2 col-sm-8 col-xs-12 ">
+						<img src="./images/VC-tech-Tracks-No-words.png" class="img-responsive center-block VCTLogo" alt="Valencia Tech Club Logo">
+					</div>
+
+					<div class="col-lg-8 col-lg-push-2">
+						<h1 class="text-center">Valencia
+							<br>Technology Club</h1>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+	</div>
+
+	<!--End Landing-->
+	<!--Begin Quote-->
+	<div id="quote">
+		<p>"Somewhere,
+			<br>Something incredible
+			<br>is waiting to be known"</p>
+
+		<h4>-Carl Sagan</h4>
+	</div>
+	<!--End Quote-->
+
+	<!--Begin About-->
+	<div class="container-fluid aboutSection">
+		<a class="lts" name="about">hi there</a>
+		<div class="row">
+			<div class="col-lg-8 col-lg-push-2">
+				<h2>Who We Are...</h2>
+				<p>
+					The Technology Club is the point of convergance for a variety of technology focused disciplines at Valencia College. Our goal is to build a community through which students can grow and prosper, learning from one another and through the club sponsored
+					Tech Talks.
+					<br> We're still a new club but we've had a strong first year and are only getting better.</p>
+				<h2>Why we do it...</h2>
+				<p> A career in technology can mean any one, or more, of an ever growing plethora of things. Not only that, technology isn't exactly known for remaining the same, we're all part of the most constantly and consistently evolving industry in the world. Because
+					of this we want to be, at least, aware of new trends, ideas, and technologies; big and small. This is why we do this. So that we can all become more well rounded and have a community of like minded people with the same passions.
+
+					<br> As such our Tech Talks cover a variety of subjects. Everything from software development, hardware across industries, and networking, to general IT, consumer and hobbyist electronics, digital media, and web frameworks... the list goes on and on,
+					and we at the Tech Club seek to provide education and opportunities to our members in any way we can.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--End About-->
+
+
+	<!--Begin Events Cal-->
+	<div class="container-fluid eventsback">
+		<a class="lts" name="cal">hi there</a>
+
+		<h2>Events</h2>
+		<div class="clndr">
+		</div>
+
+
+	</div>
+
+
+
+	<!--End Events Cal-->
+
+
+	<!--Begin Contact-->
+	<div class="container-fluid contactback">
+		<a class="lts" name="contact">hi there</a>
+		<h2>Contact</h2>
+	</div>
+
+	<!--End Contact-->
+
+
+
+	<script type="text/template" id="tmplt">
+		<div class="clndr-controls">
+			<div class="clndr-previous-button">&lsaquo;</div>
+			<div class="month">
+				<%= month %>
+			</div>
+			<div class="clndr-next-button">&rsaquo;</div>
+		</div>
+		<div class="clndr-grid">
+			<div class="days-of-the-week">
+				<% _.each(daysOfTheWeek, function(day) { %>
+					<div class="header-day">
+						<%= day %>
+					</div>
+					<% }); %>
+						<div class="days">
+							<% _.each(days, function(day) { %>
+								<div class="<%= day.classes %>">
+									<span class="event-indicator">
+										<%- (day.events.length) ? day.events.length : '' %>
+									</span>
+									<%= day.day %>
+								</div>
+								<% }); %>
+						</div>
+			</div>
+		</div>
+		<div>&nbsp;</div>
+    <div>
+      <h4 class="details-header hidden">Details</h4>
+      <div id="clndr-details">
+      </div>
+    </div>
+	</script>
+  <script type="text/template" id="details-tmplt">
+    <p class="details">
+      <a class="details-link" href="<%=link %>">
+        <%= description %>
+      </a>
+    </p>
+  </script>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/moment.min.js"></script>
+	<script src="./js/underscore.min.js"></script>
+	<script src="./js/clndr.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+body {
+    font-family: 'Droid Sans Mono', sans-serif;
+}
+
+p {
+    font-weight: 300;
+}
+a {
+    opacity: .86;
+}
+a:hover {
+    opacity: .5;
+}
+
+.lead {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.outline-r {
+    outline: 1px solid red;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.img-responsive {
+    max-width: 99%;
+    margin: 0 auto;
+}
+
+.area {
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+/*** Calendar ***/
+.clndr {
+    display: block;
+
+    max-width: 500px;
+    margin: 0 auto;
+}
+.clndr .clndr-controls {
+    position: relative;
+
+    border-bottom: 1px solid #ccc;
+}
+.clndr .clndr-controls .month {
+    padding: 12px 0;
+
+    text-align: center;
+}
+.clndr .clndr-controls .clndr-previous-button,
+.clndr .clndr-controls .clndr-next-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 12px;
+
+    cursor: pointer;
+}
+.clndr .clndr-controls .clndr-next-button {
+    right: 0;
+    left: auto;
+}
+.clndr .clndr-grid .days-of-the-week {
+    width: 100%;
+}
+.clndr .clndr-grid .days-of-the-week .header-day {
+    float: left;
+
+    width: 14.28571%;
+    padding: 12px 0;
+
+    text-align: center;
+}
+
+.clndr .days .day,
+.clndr .days .empty {
+    position: relative;
+
+    float: left;
+
+    width: 14.28571%;
+    padding: 12px 0;
+
+    text-align: center;
+}
+.clndr .days .today {
+    opacity: .6;
+    color: #000;
+    background: #ddd;
+}
+
+.clndr .day.event {
+    cursor: pointer;
+
+    color: #eee;
+    background: #bf311a;
+}
+
+.clndr .day.event .event-indicator {
+    font-size: 10px;
+
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.clndr .adjacent-month {
+    opacity: .2;
+}

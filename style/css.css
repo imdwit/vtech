@@ -1,0 +1,290 @@
+
+/* h# tags, text color, other general styles and resets
+============================================= */
+* {
+    color:#fff8ee;
+    font-family: 'Lato', sans-serif;
+    font-size: 100;
+    max-width: 100%;
+}
+h1 {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    font-size:6.5em;
+    font-weight: 200;
+
+    color:#ebe9c8;
+
+    text-shadow: 2.5px 5px 7px #000;
+}
+h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    margin-top: 6vh;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size:4em;
+    font-weight: 200;
+
+    color:rgb(229, 229, 229);
+
+
+}
+h4 {
+    font-family: 'Lato', sans-serif;
+
+    font-size:1.2em;
+    font-weight: 200;
+
+    color:#ebe9c8;
+}
+body {
+    background-color: #747070;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.lts{
+    visibility: hidden;
+}
+
+/* Navbar
+============================================= */
+
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+
+}
+
+.navbar-brand {
+    float: left;
+    max-height: auto;
+    overflow: visible;
+    padding: 0;
+}
+
+
+.navbar-toggle {
+    margin-top: 2.5vh;
+}
+
+.navbar-right a {
+    color:#ebe9c8 !important;
+    font-size: 2em;
+    font-weight: 100;
+    margin-top: 1.5vh;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #d9c088 !important;
+  border-radius: 1px;
+}
+
+/* Logo stuff
+============================================= */
+.VCTLogo {
+    margin-top: 10vh;
+    margin-bottom: 2.5vh;
+}
+#miniLogo {
+max-width: 80px;
+
+}
+
+/* Landing page
+============================================= */
+
+.groupback {
+    background-image: url(../images/group.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.first {
+    margin: 0;
+    padding: 0;
+
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+
+}
+
+/* Quote Divisor
+============================================= */
+
+#quote{
+    overflow: hidden;
+    height: 30vh;
+    width:100vw;
+    max-width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.69);
+    background-attachment: fixed;
+
+    margin: 0px;
+    font-size:2.5em;
+    font-weight: 100;
+
+    color:#ebe9c8;
+
+    text-align: center;
+
+}
+
+#quote p {
+    margin-top: 5vh;
+}
+/* About page
+============================================= */
+
+.aboutSection {
+    margin: 0;
+    padding: 0;
+
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+    background-image: url(../images/About.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.aboutSection p {
+    text-align:center;
+    margin-top: 5vh;
+    font-size: 2em;
+    color:#ebe9c8;
+
+}
+
+/* Events Cal
+============================================= */
+
+.eventsback {
+    margin: 0;
+    padding: 0;
+
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+    background-image: url(../images/calBack.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+
+/* Contact page
+============================================= */
+
+.contactback {
+    margin: 0px !important;
+    padding: 0px !important;
+
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+    background-image: url(../images/contactBack.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Footer
+============================================= */
+
+.footer {
+
+}
+
+
+/* Media Queries
+============================================= */
+
+@media (max-width: 550px) {
+h2 {
+    font-size:3.1em;
+}
+h1{
+    font-size: 3.4em;
+    }
+.navbar-right a {
+    text-align: center;
+}
+.VCTLogo {
+    max-width: 270px;
+    height: auto;
+    margin-top: 5vh;
+    margin-bottom: 0vh;
+}
+#miniLogo {
+max-width: 60px;
+}
+/* About page
+========================*/
+.aboutSection {
+    background-image: url(../images/aboutMobile.jpg);
+
+ /* Quote Divisor
+======== */
+#quote{
+    overflow: hidden;
+    height: 40vh;
+    width:100vw;
+    max-width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.69);
+    background-attachment: fixed;
+
+    margin: 0px;
+    font-size:2.5em;
+    font-weight: 100;
+
+    color:#ebe9c8;
+
+    text-align: center;
+
+}
+
+#quote p {
+    margin-top: 5vh;
+}
+#quote p {
+    margin-top: 2.5vh;
+    font-size: .8em;
+}
+
+}
+
+
+/* Quote Divisor
+============================================= */
+#quote{
+    overflow: hidden;
+    height: auto;
+}
+
+#quote p {
+    margin-top: 2.5vh;
+}
+}
